@@ -2,10 +2,10 @@ version: 0.2
 phases:
     pre_build:
     commands:
-      - echo this is pre-build stage .
+      - echo 'this is pre-build stage'
   build:
     commands:
-      - echo this is build stage .
+      - echo 'this is build stage .'
   post_build:
     commands:
       - echo this is post-build stage to upgrade helm on k8s CLuster .
