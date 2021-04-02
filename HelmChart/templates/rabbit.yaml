@@ -29,7 +29,7 @@ spec:
       hostNetwork: true
       containers:
       - name: compliancex-rabbitmq
-        image: nginx:1.19.*
+        image: nginx:1.18-alpine
         ports:
         - containerPort: 80
 
