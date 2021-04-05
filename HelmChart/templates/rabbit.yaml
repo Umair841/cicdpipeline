@@ -7,8 +7,8 @@ spec:
     app: compliancex-rabbitmq
   ports:
     - name: tcp
-      port: 80
-      targetPort: 80
+      port: 5000
+      targetPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -29,8 +29,8 @@ spec:
       hostNetwork: true
       containers:
       - name: compliancex-rabbitmq
-        image: httpd:alpine
+        image: umair841/demo
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 
 
