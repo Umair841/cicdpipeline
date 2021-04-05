@@ -18,6 +18,8 @@ spec:
   selector:
     matchLabels:
       app: compliancex-web
+  strategy:
+    type: Recreate
   replicas: 1
   template:
     metadata:
