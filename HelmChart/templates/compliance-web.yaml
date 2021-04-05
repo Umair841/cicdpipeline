@@ -29,6 +29,6 @@ spec:
       hostNetwork: true
       containers:
       - name: compliancex-web
-        image: umair841/demo
+        image: nginx:alpine
         ports:
         - containerPort: 5000
