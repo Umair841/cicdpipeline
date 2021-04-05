@@ -27,7 +27,7 @@ spec:
       hostNetwork: true
       containers:
       - name: compliancex-web
-        image: 059516066038.dkr.ecr.us-east-1.amazonaws.com/compliancex:latest
+        image: umair841/demo
         ports:
         - containerPort: 8000
         env:
