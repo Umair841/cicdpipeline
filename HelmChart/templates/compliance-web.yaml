@@ -7,8 +7,8 @@ spec:
     app: compliancex-web
   ports:
     - protocol: TCP
-      port: 9090
-      targetPort: 8000
+      port: 5000
+      targetPort: 5000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -29,31 +29,4 @@ spec:
       - name: compliancex-web
         image: umair841/demo
         ports:
-        - containerPort: 8000
-        env:
-        - name: DATABASE_NAME
-          value: "compliancexdb"
-        - name: DATABASE_USER 
-          value: "sa"
-        - name: DATABASE_PASSWORD
-          value: "StarGate@22"
-        - name: DATABASE_HOST 
-          value: "172.30.3.29"
-        - name: NO_SQL_ROUTER_NAME
-          value: ""
-        - name: NO_SQL_DATABASE_NAME 
-          value: "compliancexdb"
-        - name: RABBITMQ_HOST
-          value: "127.0.0.1"
-        - name: RABBITMQ_USERNAME 
-          value: "sa"
-        - name: MONGO_USER_NAME
-          value: "sa"
-        - name: MONGO_PASSWORD 
-          value: "StarGate@22"
-        - name: NO_SQL_HOST
-          value: "172.30.3.29"
-        - name: RABBITMQ_PASSWORD 
-          value: "StarGate@22"                
-        command: ["/bin/sh","-c"]
-        args: ["python manage.py migrate && python manage.py collectstatic --noinput && python manage.py runserver 0.0.0.0:8000"]
+        - containerPort: 5000
